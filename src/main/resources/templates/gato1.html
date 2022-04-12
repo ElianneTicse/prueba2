@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+            <title>Un gatito</title>
+    </head>
+    <body>
+        <form th:object="${gato}">
+            <div>
+                <label>Nombre del gatito: </label>
+                <input type="text" th:field="*{nGato}">
+            </div>
+            <div>
+                <label>Dueño: </label>
+                <input type="text" th:field="*{nDuenio}">
+            </div>
+            <div>
+                <label>Edad gatito: </label>
+                <input type="text" th:field="*{edadGato}">
+            </div>
+            <div>
+                <label>Raza del gatito: </label>
+                <input type="text" th:field="*{razaGato}">
+            </div>
+        </form>
+
+
+    </body>
+</html>

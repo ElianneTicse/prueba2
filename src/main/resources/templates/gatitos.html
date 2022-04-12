@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista de todos los gatitos</title>
+    </head>
+    <body>
+        <h3>Lista de mininos MEOW</h3>
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Nombre del gatito</th>
+                <th>Dueño</th>
+                <th>Edad minina</th>
+                <th>Raza del gatito</th>
+            </tr>
+            <tr th:each="gato, i : ${listaGatitos}">
+                <td th:text="${i.index + 1}"></td>
+                <td th:text="${gato.nGato}"></td>
+                <td th:text="${gato.nDuenio}"></td>
+                <td th:text="${gato.edadGato}"></td>
+                <td th:text="${gato.razaGato}"></td>
+            </tr>
+        </table>
+
+        <h3>Lista Productos</h3>
+        <h2 th:text="|Zona: ${zona=='1'?'LIMA':'CHACLA'}|"></h2>
+        <label for="productos">Productos</label>
+        <select id="productos" th:if="${zona == '1'}">
+            <option th:each="producto : ${listaProd}"
+                    th:value="${producto.idProd}"
+                    th:text="${producto.nombreP}"></option>
+        </select>
+
+        <div>
+            <select id="productos1" th:if="${zona == '2'}">
+                <option th:each="producto : ${listaProd}"
+                        th:value="${producto.idProd}"
+                        th:text="${producto.nombreP}"
+                        th:if="${producto.nombreP == 'Whiskas' or producto.nombreP == 'Friskies'}"></option>
+            </select>
+            <p style="color: red" th:unless="${zona == '2'}"> No hay productos en la zona <span th:text="${zona=='1'?'LIMA':'X'}"></span></p>
+        </div>
+S
+
+
+    </body>
+</html>

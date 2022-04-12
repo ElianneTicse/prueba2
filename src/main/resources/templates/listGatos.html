@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista de GATOS</title>
+    </head>
+    <body>
+        <h6>Lista de Gatos MEOWWWWW</h6>
+        <h2>Mensaje gatuno: <span th:text="${msg}"/></h2>
+
+        <p th:text="|El nombre recibido es: ${nombre}|"></p>
+        <div th:text="'La edad recibida es: ' + ${edad}"></div>
+
+        <p th:text="|El nombre recibido es: ${gato.getnGato()}|"></p>
+        <div th:text="'La edad recibida es: ' + ${gato.getEdadGato() + 'años'}"></div>
+        <p th:text="|El nombre del dueño recibido es: ${gato.getnDuenio()}|"></p>
+        <div th:text="'La raza recibida es: ' + ${gato.getRazaGato()}"></div>
+
+
+    </body>
+</html>
