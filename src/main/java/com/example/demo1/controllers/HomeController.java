@@ -11,7 +11,7 @@ public class HomeController {
     @RequestMapping(value = {"/pat","/eli","/pati","tati"}) /*Enlazar varias rutas de html*/
     /*@ResponseBody solo necesario para retornar textos en htmls*/
     public String pgEli(){
-        System.out.println("Esta es la pagina de Eli");
+        System.out.println("Esta es la pagina de Elianne");
         return "home"; /*cuando tenemos un html, solo poner el nombre del html en comillas*/
     }
 
