@@ -19,7 +19,7 @@ public class HomeController {
     @ResponseBody
     public String pgNew1(){
         System.out.println("new1 act!");
-        return "Hola mundo";
+        return "Hola mundo gatuno uwu";
     }
 
     @RequestMapping("")
