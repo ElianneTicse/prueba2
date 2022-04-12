@@ -26,7 +26,7 @@ public class HomeController {
     @ResponseBody
     public String welcome(){
         System.out.println("welcomeeeee");
-        return "bienvenido a tu mundo 444444";
+        return "bienvenido a tu mundo 4444iii4";
     }
 
 
