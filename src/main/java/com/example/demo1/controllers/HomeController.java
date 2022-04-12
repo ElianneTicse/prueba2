@@ -25,7 +25,7 @@ public class HomeController {
     @RequestMapping("")
     @ResponseBody
     public String welcome(){
-        System.out.println("welcome");
+        System.out.println("welcomeeeee");
         return "bienvenido";
     }
 
